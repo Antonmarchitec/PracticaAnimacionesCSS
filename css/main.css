@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: oswald;
+}
+h1{
+    color: aqua;
+    text-align: center;
+    font-size: 50px;
+}
+.contenedor{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background: grey;
+}
+.contenedor .contenedor_parrafo{
+    color: white;
+
+    /*ANIMACIONES ESTABLECIDAS POR Animate.CSS*/
+    display: inline-block;
+    margin: 0 0.5rem;
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.contenedor .contenedor_cajas{
+    width: 100%;
+    padding: 10px 0px;
+    background: rgb(41, 41, 41);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.contenedor_cajas_A{
+    width: 250px;
+    height: 300px;
+    background: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1.5s ease-in;
+    margin-left: -200px;
+    opacity: 0;
+}
+.contenedor_cajas_A_JS{
+    animation-name: caja1;
+    animation-duration: 2s;
+    animation-timing-function: ease ease-in;
+    animation-iteration-count:initial;
+    animation-fill-mode: both;
+    animation-direction:initial;
+    animation-play-state: initial;
+    margin-left: 0;
+    opacity: 1;
+    background: orange;
+}
+@keyframes caja1 {
+    from{
+        transform: translateX(-400px) rotate(0deg);
+        
+    }to{
+        transform: translateX(100px) rotate(620deg);
+        
+    }
+}
+
+.contenedor_cajas_B{
+    width: 250px;
+    height: 300px;
+    background: rgb(77, 19, 19);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1.5s ease-in;
+    margin-right: -200px;
+    opacity: 0;
+
+}
+.contenedor_cajas_B_JS{
+    animation-name: caja2;
+    animation-duration: 2s;
+    animation-timing-function: ease ease-in;
+    animation-iteration-count:initial;
+    animation-fill-mode: both;
+    animation-direction:alternate;
+    animation-play-state: initial;
+    margin-right: 0px;
+    opacity: 1;
+    background: yellow;
+}
+@keyframes caja2 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
